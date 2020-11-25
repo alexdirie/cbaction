@@ -1,0 +1,375 @@
+$colors: ('rojo': red , 'blanco': white ,'negro': black);
+$font-family1: 'Bebas Neue', cursive;
+$font-family2: 'Roboto', sans-serif;
+$font-sizes: ('x-small': 2.7vh , 'small': 4vh ,'medium': 6vh ,'large': 8vh);
+
+/*HEADER NAV BODY*/
+
+.header {
+    position: sticky;  
+    top: 10px; 
+    z-index: 3; 
+}
+
+.header__nav {
+    background-color: rgba(0, 0, 0, 0.486);  
+    display: flex;  
+    flex-direction: row;  
+    align-items: center;  
+    margin-right: 20px;
+}
+
+.header__nav__logo {
+height: 100px;
+background-color: rgba(0, 0, 0, 0); 
+}
+
+.header__nav__a {
+    color: map-get($map: $colors, $key: blanco);  
+    background-color: rgba(0, 0, 0, 0); 
+    position: sticky;  
+    font-size: 5vh;
+   text-decoration: none;
+  transition: font-size .5s;
+  font-family: $font-family1;
+}
+
+  a:hover {
+ font-size: 5.3vh;
+ color: map-get($map: $colors, $key: rojo);
+ text-decoration: none;
+ }
+  
+ body {
+   background-color:map-get($map: $colors, $key: negro);  
+   animation: body-fade 2s;
+  } 
+
+   /*VIDEO Y SUBTITULO HOME*/
+
+video {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+    }
+    
+  @keyframes body-fade {
+    from { opacity: 0;} 
+    to {opacity: 1;} 
+   }  
+
+/*TEXTOS DE SECCIONES*/
+
+h1 {color: map-get($map: $colors, $key: rojo);
+  font-family: $font-family1;
+  font-size: map-get($map: $font-sizes, $key: large);
+    text-align: center;   
+}
+
+.subtituloHome {
+    letter-spacing: 5px;
+    border: solid map-get($map: $colors, $key: rojo);
+    border-left: none;
+    border-right: none;
+    margin-top: 100px;
+    animation-name: animate__fadeIn;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    }
+    
+    @keyframes animate__fadeIn {    
+    0% {opacity: 1;}
+    25% {opacity: .6;}
+    50% {opacity: .3;}
+    75% {opacity: .6;}
+    100% {opacity: 1;}    
+    }
+  
+
+h2 {
+    color: map-get($map: $colors, $key: rojo);
+    font-family: $font-family1;
+    font-size: map-get($map: $font-sizes, $key: medium);
+    text-align: center;
+    
+}
+
+  h3 {
+    color: map-get($map: $colors, $key: rojo);
+    font-family: $font-family1;
+    font-size: map-get($map: $font-sizes, $key: small);
+    text-align: center;
+     
+}
+h4 {
+    color: map-get($map: $colors, $key: blanco);
+    font-family: $font-family1;
+    font-size: map-get($map: $font-sizes, $key: x-small);
+    text-align: center;
+    }
+
+    p {
+        color: map-get($map: $colors, $key: blanco);
+        font-family: $font-family2;
+        text-align: center;
+        font-size: map-get($map: $font-sizes, $key: x-small);
+        margin-top: 30px;
+    
+    }
+
+    .jumbotron {
+      background-color: rgb(31, 30, 30);
+      padding: 10px;
+      margin: 10px;
+    }
+  
+
+
+      /*INTEGRANTES*/
+
+      ul {
+        font-family: $font-family2;
+      color: map-get($map: $colors, $key: blanco);
+       font-size: map-get($map: $font-sizes, $key: x-small); 
+       li {
+        text-align: left;
+      }
+      }    
+      
+      .bioServicio {
+
+        .somos {   
+            margin-bottom: 100px;
+              }
+      
+
+        .integrantes {
+            width: 100%;
+            padding: 75px 0px;
+            display: block;
+            text-align: center;             
+          }
+
+          .img-team {
+            opacity: .6;
+            }
+            
+            .img-team:hover {
+            opacity: 1;
+            transition: .5s;
+            }
+            
+          .carousel-item {
+            height: 400px;
+              }
+            
+              @media (min-width: 720px) {
+                .carousel-item {
+               height: 100vh !important;
+                }
+            
+              }
+            
+              .slide1 {
+                background-image: url(../img/servicio3.jpg);
+                background-size: cover;
+                background-position: center center;
+              }
+            
+              .slide2 {
+                background-image: url(../img/servicio2.jpg);
+                background-size: cover;
+                background-position: center center;
+              }
+              .slide3 {
+                background-image: url(../img/servicio.jpg);
+                background-size: cover;
+                background-position: center center;
+              }
+            
+              .servicio {
+                margin: 50px;
+              }
+              
+        .modal-content {
+
+        .modal-body {
+      
+            color:map-get($map: $colors, $key: negro);
+            font-family: $font-family2;
+            font-size: map-get($map: $font-sizes, $key: x-small);
+            }
+            
+            .modal-title {
+            font-family: $font-family1;
+            font-size: 5vh;
+            }
+            
+            .viñeta {
+              color:map-get($map: $colors, $key: negro);
+              font-family: $font-family1;
+              list-style: square url(../img/viñeta.gif);
+            }
+            
+            .btn {
+              background-color:negro;
+              color: map-get($map: $colors, $key: blanco);
+              font-family: $font-family1;
+            }    
+      }
+      }                           
+    
+   /*MEDIA IFRAMES*/
+
+  iframe {
+position: relative;
+width: 100%;
+padding: 20px;
+  }
+  
+    /*SHOP*/    
+    /*CARTAS CON TABLAS*/
+    
+.shop {
+ display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   text-align: center;
+   justify-content: space-around; }
+.shop__ul {
+color:map-get($map: $colors, $key: negro);
+    font-family: $font-family1;
+    font-size: 2vh;
+    text-align: left;  
+}
+.shop__textos {
+font-family: $font-family1;
+background-color: map-get($map: $colors, $key: blanco);
+border: solid 1px map-get($map: $colors, $key: negro);
+color:map-get($map: $colors, $key: negro);}
+.shop__textos--negro {
+color:map-get($map: $colors, $key: negro);
+border: none;
+font-family: $font-family1;}
+.shop__textos--bordo {
+color: brown;
+border: none;
+font-family: $font-family1;}
+.shop__textos--gris {
+color: gray;
+border: none;
+font-family: $font-family1;}
+.shop__textos--blanco {
+color: rgb(63, 60, 60);
+border: none;
+font-family: $font-family1;}
+.shop__cartas {
+ margin: 10px;
+ border-radius: 1rem;
+ background-color: map-get($map: $colors, $key: blanco);
+    transition: transform 1s;}
+.shop__cartas:hover {
+transform: scale(1.1);}
+.shop__subtitulo {
+  font-family: $font-family2;
+  font-size: map-get($map: $font-sizes, $key: small);
+}
+.shop__a {
+  color: map-get($map: $colors, $key: blanco);
+  font-size: 5vh;
+ text-decoration: none;
+transition: font-size .5s;
+font-family: $font-family2;
+}
+   
+   /*CONTACTO*/
+
+
+   .contacto__img {
+    background-image: url(../img/contacto.jpg);
+            background-size: cover;
+            background-position: center;
+    }
+    
+    .contacto__form {padding-bottom: 100px;
+            padding-top: 100px;}
+    
+    .contacto__form__titulo {color: map-get($map: $colors, $key: rojo);
+            font-family: $font-family1;
+            font-size: map-get($map: $font-sizes, $key: large);
+            text-align: center;}
+    
+    .contacto__form__texto {
+    color: map-get($map: $colors, $key: blanco);
+            font-family: $font-family2;
+            font-size: map-get($map: $font-sizes, $key: x-small);
+            text-align: center;
+    }
+    
+    .contacto__form__botones {
+    background-color: map-get($map: $colors, $key: blanco);
+            border: none;
+            border-radius: 10px;
+            width:250px;
+            height: 30px;
+            transition: width 1s, height 1s;
+    }
+    .contacto__form__botones:hover {
+      width: 450px;
+      height: 30px;
+      }      
+    
+    
+    .contacto__form__submit {
+    color:map-get($map: $colors, $key: negro);
+            font-family: $font-family1;
+            font-size: map-get($map: $font-sizes, $key: x-small);
+            background-color: map-get($map: $colors, $key: blanco);
+            border: none;
+            border-radius: 30px;
+    }
+    
+    
+    .contacto__form__select {width: 200px;
+            height: 30px;}
+    
+    .contacto__form__textarea { width: 250px;
+            height: 100px;
+            background-color: map-get($map: $colors, $key: blanco)
+                ;
+                border-radius: 10px;  
+                transition: width 1s, height 1s;}
+    .contacto__form__textarea:hover {
+            width: 450px;
+            height: 130px;
+            }              
+    
+   /*FOOTER*/    
+  
+.footer {
+    background-color:map-get($map: $colors, $key: negro);
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.footer__a {
+    color: map-get($map: $colors, $key: blanco);
+    font-size: map-get($map: $font-sizes, $key: small);
+   text-decoration: none;
+  transition: font-size .5s;
+  font-family: $font-family1;
+
+
+}
+
+.footer__img {
+    width: 40px; 
+    padding: 5px;  
+}
+   
