@@ -43,7 +43,7 @@ video {
   text-align: center; }
 
 @media (max-width: 425px) {
-video { height: 400px; 
+video { height: 300px; 
 }}
 
 @keyframes body-fade {
