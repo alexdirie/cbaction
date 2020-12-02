@@ -42,6 +42,10 @@ video {
   width: 100%;
   text-align: center; }
 
+@media (max-width: 425px) {
+video { height: 400px; 
+}}
+
 @keyframes body-fade {
   from {
     opacity: 0; }
