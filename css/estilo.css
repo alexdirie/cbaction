@@ -42,10 +42,6 @@ video {
   width: 100%;
   text-align: center; }
 
-@media (max-width: 425px) {
-video { height: 300px; 
-}}
-
 @keyframes body-fade {
   from {
     opacity: 0; }
@@ -100,6 +96,12 @@ h4 {
   font-family: "Bebas Neue", cursive;
   font-size: 2.7vh;
   text-align: center; }
+
+  h5 {
+    color: black;
+    font-family: "Bebas Neue", cursive;
+    font-size: 2.7vh;
+    text-align: center; }
 
 p {
   color: white;
@@ -190,63 +192,39 @@ iframe {
 /*SHOP*/
 /*CARTAS CON TABLAS*/
 .shop {
+  color: black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
   justify-content: space-around; }
 
-.shop__ul {
-  color: black;
-  font-family: "Bebas Neue", cursive;
-  font-size: 2vh;
-  text-align: left; }
+  .cartas {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 75%;
+    padding-top: 20px;
+}
 
-.shop__textos {
-  font-family: "Bebas Neue", cursive;
-  background-color: white;
-  border: solid 1px black;
-  color: black; }
+.cartasCarrito {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    width: 25%;
+    height: 75%;
+    padding-top: 20px;
+}
 
-.shop__textos--negro {
-  color: black;
-  border: none;
-  font-family: "Bebas Neue", cursive; }
-
-.shop__textos--bordo {
-  color: brown;
-  border: none;
-  font-family: "Bebas Neue", cursive; }
-
-.shop__textos--gris {
-  color: gray;
-  border: none;
-  font-family: "Bebas Neue", cursive; }
-
-.shop__textos--blanco {
-  color: #3f3c3c;
-  border: none;
-  font-family: "Bebas Neue", cursive; }
-
-.shop__cartas {
-  margin: 10px;
-  border-radius: 1rem;
-  background-color: white;
-  transition: transform 1s; }
-
-.shop__cartas:hover {
-  transform: scale(1.1); }
-
-.shop__subtitulo {
-  font-family: "Roboto", sans-serif;
-  font-size: 4vh; }
-
-.shop__a {
-  color: white;
-  font-size: 5vh;
-  text-decoration: none;
-  transition: font-size .5s;
-  font-family: "Roboto", sans-serif; }
+.botonProducto {
+color: white;
+background-color: rgb(27, 25, 25);
+border: black;
+}
 
 /*CONTACTO*/
 .contacto__img {
@@ -279,7 +257,7 @@ iframe {
   transition: width 1s, height 1s; }
 
 .contacto__form__botones:hover {
-  width: 300px;
+  width: 450px;
   height: 30px; }
 
 .contacto__form__submit {
@@ -302,7 +280,7 @@ iframe {
   transition: width 1s, height 1s; }
 
 .contacto__form__textarea:hover {
-  width: 300px;
+  width: 450px;
   height: 130px; }
 
 /*FOOTER*/
