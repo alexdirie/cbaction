@@ -118,4 +118,43 @@ for (i=0; i<input.length; i++) {
   document.getElementById("carrito").innerHTML = aux1 
  }
 
+ function borrarUnProducto() {
+  const nuevoCarrito = [];
+  for(let i = 0; i < carrito.length; i++){
+    if(i != 0){
+      nuevoCarrito.push(carrito[i]);
+    }
+  }
+  localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+  carrito = nuevoCarrito;
+}
 
+
+
+//APLICANDO jQuery//
+ 
+     $("button").hover( function () {
+      $ ( this ).css("background-color" , "red");
+    },
+    function () {
+      $(this).css("background-color", "black");
+    });
+
+    $("input").hover( function () {
+      $ ( this ).css("background-color" , "lightpink");
+    },
+    function () {
+      $(this).css("background-color", "white");
+    });
+
+
+    //APLICANDO AJAX//
+
+    $.get(
+      "/data.json",
+      function (data, status) {
+        console.log(data)
+        console.log(status);
+        baseDedatos = valores;
+      }
+    );
